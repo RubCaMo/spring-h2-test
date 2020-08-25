@@ -12,7 +12,7 @@ import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication(exclude = { SecurityAutoConfiguration.class }, scanBasePackages={"com.b2b.example.controller"})
 @EnableConfigurationProperties
-@ComponentScan(basePackages = {"com.b2b.example.services"})
+@ComponentScan(basePackages = {"com.b2b.example.services", "com.b2b.example.controller"})
 public class ExampleApplication {
 
     static Logger logger = (Logger) LoggerFactory.getLogger(Logger.class);
