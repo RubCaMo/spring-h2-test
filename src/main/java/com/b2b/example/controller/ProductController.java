@@ -7,7 +7,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.xml.ws.Response;
 import java.util.List;
 
 @RestController
@@ -18,19 +17,18 @@ public class ProductController {
     private ProductRepository _productRepository;
 
     @GetMapping("/")
-    public List<Product> products(){
+    public List<Product> products() {
         System.out.println("PRODUCTS ALL");
         return (List<Product>) this._productRepository.findAll();
     }
 
-    /*
-    @RequestMapping(value = "/{name}", method = RequestMethod.GET)
-    public ResponseEntity<Product> getProductByName(@RequestBody String name){
+    @RequestMapping(value = "/name", method = RequestMethod.GET)
+    public ResponseEntity<Product> getProductByName(@RequestBody String name) {
         Product product = _productRepository.findByName(name);
-        if(product == null){
+        if (product == null) {
             return new ResponseEntity<Product>(HttpStatus.NOT_FOUND);
         }
         return new ResponseEntity<Product>(product, HttpStatus.OK);
-    }*/
+    }
 
 }
