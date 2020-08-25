@@ -5,4 +5,4 @@ insert into user values (3, 'Pere', 'Milla');
 
 insert into product values (1, 'Product1', 4.5);
 insert into product values (2, 'Product2', 11.0);
-insert into product values (3, 'Product1', 45.1);
+insert into product values (3, 'Product3', 45.1);

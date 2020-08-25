@@ -23,13 +23,14 @@ public class ProductController {
         return (List<Product>) this._productRepository.findAll();
     }
 
+    /*
     @RequestMapping(value = "/{name}", method = RequestMethod.GET)
-    public ResponseEntity<Product> getProductByName(@PathVariable String name){
+    public ResponseEntity<Product> getProductByName(@RequestBody String name){
         Product product = _productRepository.findByName(name);
         if(product == null){
             return new ResponseEntity<Product>(HttpStatus.NOT_FOUND);
         }
         return new ResponseEntity<Product>(product, HttpStatus.OK);
-    }
+    }*/
 
 }
