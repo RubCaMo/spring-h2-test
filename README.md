@@ -80,5 +80,18 @@ into a single executable JAR file with Maven, use the below command.
 
 > mvn install
 
-Or you can also use an IDE like IntellJ to build: 
+Or you can also use an IDE like IntellJ to build it.
+
+### Run Spring Boot app with Java -jar command or Maven
+To run your Spring Boot app from a command line in a Terminal window you can run the "java -jar" command.
+
+> java -jar target/myapp-0.0.1-SNAPSHOT.jar
+
+We can also run our Spring Boot app using Maven plugin. Use the sentence below to run with Maven:
+
+> mvn spring-boot:run
+
+
+
+
 
